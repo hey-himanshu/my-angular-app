@@ -30,10 +30,14 @@
         </ul>
       </div>
       <button
+        *ngIf="!isLogin"
         routerLink="login"
         class="py-1 px-2 bg-black border border-black rounded-md hover:bg-transparent hover:text-black duration-300 order-3 text-white text-sm"
       >
         Login
+      </button>
+      <button routerLink="profile" class="order-3" *ngIf="isLogin">
+        <img src="/assets/user.png" width="40px" height="40px" />
       </button>
     </div>
   </nav>
